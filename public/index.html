@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>锁屏</title>
+         <meta name="viewport" content="width=device-width">
+        <script>
+            function handleLockClick() {
+                fetch(`/api/v1/lock${location.search}`, {method: 'PUT'})
+            }
+            function handleUnlockClick() {
+                fetch(`/api/v1/unlock${location.search}`, {method: 'PUT'})
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onclick="handleLockClick()">lock</button>
+        <button type="button" onclick="handleUnlockClick()">unlock</button>
+    </body>
+</html>
